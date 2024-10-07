@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<!--<html lang="en">
+<!--<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,9 +29,37 @@
 
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+      <style>
+        body{
+          
+          background: linear-gradient(to left, #87CEEB, #8A2BE2);
+}
+        .section {
+          background-color: #f0f0f0;}
+          a:hover {
+            color: orange; 
+        }
+        tr:nth-child(odd) {
+            background-color: #c79292;}
+        tr:nth-child(even) {
+            background-color: #7ab49a;}
+          tr:hover {
+            background-color: #ffcc00;
+        }
+        img:hover{
+        transform: scale(5);
+        }
+      @media (max-width: 5px){
+            body {
+                background-color: #87CEEB;
+            }
+          }
+
+      </style>
+    </head>
     <body>
-        <table width="100%" border="1">
+        <table width="100%" border="1" class="section">
             <tr>
                 <td>BRAHIMI Kahina</td>
                 <td>Celibataire</td>
@@ -49,20 +77,20 @@
                 <td></td>
             </tr>
         </table>
-        <h1>
+        <h1 style="text-align: center;">
             Ingénieur d'études et développement
         </h1>
         <h2>
             Formations
         </h2>
-        <table width="100%" border="1">
+        <table width="100%" border="1" class="section">
             <tr>
                 <td>2016</td>
-                <td><a href="https://galilee.univ-paris13.fr/master/master-ingenierie-innovation-images-reseaux-m3ir/"></a> université Paris XIII</td>
+                <td><a href="https://galilee.univ-paris13.fr/master/master-ingenierie-innovation-images-reseaux-m3ir/" target="_blank">Master 3IR</a> université Paris XIII</td>
             </tr>
                 <tr>
                 <td>2014</td>
-                <td><a href="https://galilee.univ-paris13.fr/master/master-ingenierie-innovation-images-reseaux-m3ir/" ></a> université Paris XIII</td>
+                <td><a href="https://galilee.univ-paris13.fr/master/master-ingenierie-innovation-images-reseaux-m3ir/" target="_blank">Licence Telecom</a> université Paris XIII</td>
             </tr>
             <tr>
                 <td>2011</td>
@@ -72,7 +100,7 @@
         <h3>
           Competences
       </h3>
-      <table width="100%" border="1">
+      <table width="100%" border="1" class="section">
           <tr>
               <td>Developpement</td>
               <td>Java7, HTML</td>
@@ -93,7 +121,7 @@
         <h4>
             Experiences
         </h4>
-        <table width="100%" border="1">
+        <table width="100%" border="1" class="section">
             <tr>
                 <td>2016</td>
                 <td>Stage de fin d'etudes chez <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/640px-Orange_logo.svg.png" alt="Description de l'image" width="50" height="50"> </td>
@@ -110,7 +138,7 @@
         <h5>
             Centre d'intérets
         </h5>
-        <table width="100%" border="1">
+        <table width="100%" border="1" class="section">
             <tr>
                 <td>Sport</td>
                 <td>Running, Volley-ball</td>
