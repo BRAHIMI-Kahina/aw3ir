@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
     <style>
         body {
             background-color: #e9ebee;
@@ -21,19 +19,78 @@
         }
     </style>
 
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Ajout de fonctionnalités HTML5 au formulaire</title>
 </head>
 
 <body>
-    <nav>
-        <a href="..">🏠 Index</a> / TP4
-    </nav>
-    <h1>TP4</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
+
+    <div class="container mt-5">
+        <form id="myForm">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="nom" placeholder="Nom" required
+                    onkeyup="calcNbChar(this.id)">
+                <span class="input-group-text"><span id="nom-count">0 car.</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="prenom" placeholder="Prénom" required
+                    onkeyup="calcNbChar(this.id)">
+                <span class="input-group-text"><span id="prenom-count">0 car.</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="date" class="form-control" id="dateNaissance" required onkeyup="calcNbChar(this.id)">
+                <span class="input-group-text"><span id="dateNaissance-count">0 car.</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="adresse" placeholder="Entrez votre adresse" required
+                    onkeyup="calcNbChar(this.id)">
+                <span class="input-group-text"><span id="adresse-count">0 car.</span>
+                    <button class="btn btn-warning" type="button" onclick="getLocation()">📍 GPS</button>
+            </div>
+
+            <!-- Carte Google Maps statique (centrée par défaut sur Paris) -->
+            <div id="map" style="margin-bottom: 20px;">
+                <img id="mapImage"
+                    src="https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=300x200&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
+                    alt="Google Maps" style="max-width: 100%; height: auto;">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Mail" required
+                    onkeyup="calcNbChar(this.id)">
+                <span class="input-group-text"><span id="email-count">0 car.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+
+        <h4 class="mt-5">Liste des Contacts</h4> (<span id="contactCount">0</span>)
+        <button id="resetButton" class="btn btn-primary btn-sm">Reset</button>
+        <table class="table table-bordered" id="contactsTable">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Date de Naissance</th>
+                    <th>Adresse</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div id="successMessage" style="color: green;">
+            Contact ajouté avec succès !
+        </div>
+
+        <script src="./js/bootstrap.bundle.js"></script>
+        <script src="./js/form-validation.js"></script>
+        <script src="./js/GPS.js"></script>
+
 </body>
 
 </html>
